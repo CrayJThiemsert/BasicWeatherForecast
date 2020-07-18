@@ -3,7 +3,6 @@ package com.example.basicweatherforecast
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import io.reactivex.Observable
 import io.reactivex.Observer
@@ -45,6 +44,14 @@ class MainActivity : AppCompatActivity() {
 
         gitHubUserStartWithSButton.setOnClickListener {
             startActivity<GitHubUserStartWithSActivity>()
+        }
+
+        current_weather_button.setOnClickListener {
+            startActivity<CurrentWeatherActivity>()
+        }
+
+        current_weather_rx_button.setOnClickListener {
+            startActivity<WholeDayForecastActivity>()
         }
 
     }
