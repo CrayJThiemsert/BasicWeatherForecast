@@ -26,33 +26,33 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        rj_button.setOnClickListener{
-//            startRJStream()
-            Observable.just("Hello Gundam")
-                .subscribe {
-                    println(it)
-                }
-        }
-
-        rk_button.setOnClickListener{ startRKStream() }
-
-        rz_button.setOnClickListener{ startRZStream() }
-
-        gitHubUserButton.setOnClickListener {
-            startActivity<GitHubUserActivity>()
-        }
-
-        gitHubUserStartWithSButton.setOnClickListener {
-            startActivity<GitHubUserStartWithSActivity>()
-        }
-
-        current_weather_button.setOnClickListener {
-            startActivity<CurrentWeatherActivity>()
-        }
-
-        current_weather_rx_button.setOnClickListener {
-            startActivity<WholeDayForecastActivity>()
-        }
+//        rj_button.setOnClickListener{
+////            startRJStream()
+//            Observable.just("Hello Gundam")
+//                .subscribe {
+//                    println(it)
+//                }
+//        }
+//
+//        rk_button.setOnClickListener{ startRKStream() }
+//
+//        rz_button.setOnClickListener{ startRZStream() }
+//
+//        gitHubUserButton.setOnClickListener {
+//            startActivity<GitHubUserActivity>()
+//        }
+//
+//        gitHubUserStartWithSButton.setOnClickListener {
+//            startActivity<GitHubUserStartWithSActivity>()
+//        }
+//
+//        current_weather_button.setOnClickListener {
+//            startActivity<CurrentWeatherActivity>()
+//        }
+//
+//        current_weather_rx_button.setOnClickListener {
+//            startActivity<WholeDayForecastActivity>()
+//        }
 
     }
 

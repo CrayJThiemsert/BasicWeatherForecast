@@ -32,7 +32,7 @@ class CurrentWeatherAdapter(private val mContext: Context, private val mWeatherL
     }
 
     class CurrentWeatherViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val nameTextView: TextView = itemView.nameTextView
-        val typeTextView: TextView = itemView.typeTextView
+        val nameTextView: TextView = itemView.temp_textview
+        val typeTextView: TextView = itemView.humidity_textview
     }
 }

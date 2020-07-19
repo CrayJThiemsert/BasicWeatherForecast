@@ -39,8 +39,8 @@ class GitHubUserAdapter(private val mContext: Context, private val mGitHubUserSi
     }
 
     class GitHubViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val nameTextView: TextView = itemView.nameTextView
-        val typeTextView: TextView = itemView.typeTextView
+        val nameTextView: TextView = itemView.temp_textview
+        val typeTextView: TextView = itemView.humidity_textview
         val avatarImageView: ImageView = itemView.avatarImageView
     }
 }

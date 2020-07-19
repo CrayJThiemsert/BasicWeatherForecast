@@ -7,6 +7,7 @@ data class Forecast(
     @SerializedName("cnt")
     val cnt: Int = 0,
     @SerializedName("list")
-    val list: List<Weather>,
-    @SerializedName("city")
-    val city: City = City())
+    val list: List<Weather> //,
+//    @SerializedName("city")
+//    val city: City = City()
+)

@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.basicweatherforecast.api.RetrofitClient
 import com.example.basicweatherforecast.model.OpenWeatherMapResponse.Weather
+import com.example.basicweatherforecast.utility.AppUtils
 import com.example.basicweatherforecast.utility.SetUpLayoutManager
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -39,7 +40,7 @@ class CurrentWeatherActivity : AppCompatActivity() {
     }
 
     private fun getWeatherObservable(q: String, units: String): Single<Weather> {
-        return RetrofitClient.openWeatherMapMethods().getCurrentWeather(q, units)
+        return RetrofitClient.openWeatherMapMethods().getCurrentWeatherByCityName(AppUtils.mAppId, q, units)
     }
 
     private fun getWeatherObserver(): DisposableSingleObserver<Weather> {

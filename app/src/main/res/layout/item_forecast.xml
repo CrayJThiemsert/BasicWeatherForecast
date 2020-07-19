@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_margin="16dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/datetime_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="12:00"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/temp_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:text="33\u2103"
+            android:textSize="26sp" />
+<!--        android:text="33\u2109"-->
+
+        <TextView
+            android:id="@+id/humidity_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="10%"
+            android:textSize="23dp" />
+
+    </LinearLayout>
+
+
+
+
+
+</androidx.cardview.widget.CardView>
