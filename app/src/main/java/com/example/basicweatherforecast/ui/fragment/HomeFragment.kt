@@ -191,6 +191,7 @@ class HomeFragment : Fragment() {
             override fun onSuccess(currentWeather: Weather) {
                 AppUtils.mCurrentWeather = currentWeather
                 weather_layout.visibility = View.VISIBLE
+                guide_textview.visibility = View.GONE
 
                 println("currentWeather=" + currentWeather.toString())
                 println("mCurrentWeather=" + AppUtils.mCurrentWeather.toString())

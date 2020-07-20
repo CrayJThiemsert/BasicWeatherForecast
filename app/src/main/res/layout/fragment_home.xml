@@ -12,7 +12,6 @@
     <com.mancj.materialsearchbar.MaterialSearchBar
         style="@style/MaterialSearchBarLight"
         android:id="@+id/city_searchbar"
-
         app:mt_hint="Enter City Name here"
         app:mt_speechMode="false"
         android:layout_width="match_parent"
@@ -21,6 +20,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
     </com.mancj.materialsearchbar.MaterialSearchBar>
+
+    <TextView
+        android:visibility="visible"
+        android:id="@+id/guide_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter city name to forecast weather"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/city_searchbar"/>
+
 
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
@@ -104,5 +114,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
