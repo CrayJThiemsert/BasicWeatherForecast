@@ -15,11 +15,11 @@ The goal of this assignment is to assess your skills and knowledge of following 
 
 
 ## Tech/framework used
-* a. Develop application with Kotlin language.
-* b. Design pattern with AAC, MVVM, Clean Swift, etc.
-* c. Navigation Component.
-* d. Dependencies injection (Dagger2, Koin)
-* e. Using ReactiveX (RxJava, RxKotlin) or LiveData
+a. Develop application with Kotlin language.
+b. Design pattern with AAC, MVVM, Clean Swift, etc.
+c. Navigation Component.
+d. Dependencies injection (Dagger2, Koin)
+e. Using ReactiveX (RxJava, RxKotlin) or LiveData
 
 ```sh
 dependencies {
@@ -80,4 +80,5 @@ The One Call API provides the following weather data for any geographical coordi
 4. Wait for loading project files completed.
 
 ## Test user credential
-Please register in Bitazza.com and use the credentials for testing.
+You can sign up and get free forecast from
+https://home.openweathermap.org/users/sign_up
