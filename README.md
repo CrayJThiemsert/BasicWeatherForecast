@@ -79,6 +79,11 @@ The One Call API provides the following weather data for any geographical coordi
 3. Open Android Studio, choose menu "Import project (Gradle, Eclipse, ADT, etc.)". And select the directory that extract file from 2).
 4. Wait for loading project files completed.
 
+## Recommendation for future
+1) In case that we would like to make the App do realtime auto update. We might be use implement "Websockets" on the server side.
+2) For 7 days or more forecast, now it belong to openweathermap. We can use the code to reuse in this case.
+3) Please be careful about search by non English city name.
+
 ## Test user credential
 You can sign up and get free forecast from
 https://home.openweathermap.org/users/sign_up
