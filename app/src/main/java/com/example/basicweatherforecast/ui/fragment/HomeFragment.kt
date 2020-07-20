@@ -87,11 +87,8 @@ class HomeFragment : Fragment() {
         }
 
         city_searchbar.isEnabled = false
-//        val mExecutor : AsyncTaskExecutor = AsyncTaskExecutor.DEFAULT_EXECUTOR
-//        mExecutor.execute(LoadCities(context))
 
         loadSearchBar()
-
     }
 
     private fun loadSearchBar() {

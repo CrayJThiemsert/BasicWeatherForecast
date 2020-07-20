@@ -75,7 +75,8 @@ class WholedayForecastFragment : Fragment() {
 
         back_button.setOnClickListener {
             println("Click back button!!!")
-            findNavController().navigate(R.id.action_wholedayForecastFragment_to_homeFragment, null)
+            this.findNavController().popBackStack()
+//            findNavController().navigate(R.id.action_wholedayForecastFragment_to_homeFragment, null)
         }
 
         getWholeDayForecast(city, requireContext())
