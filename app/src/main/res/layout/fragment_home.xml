@@ -4,29 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    tools:context=".ui.fragment.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:visibility="gone"
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_blank_fragment"
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/city_searchbar" />
 
     <com.mancj.materialsearchbar.MaterialSearchBar
         style="@style/MaterialSearchBarLight"
@@ -41,42 +22,77 @@
         app:layout_constraintTop_toTopOf="parent">
     </com.mancj.materialsearchbar.MaterialSearchBar>
 
-    <LinearLayout
-        android:visibility="gone"
-        android:id="@+id/weather_layout"
-        android:layout_margin="16dp"
-        android:orientation="vertical"
+    <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button">
-        <TextView
-            android:id="@+id/datetime_textview"
+        app:layout_constraintTop_toBottomOf="@+id/city_searchbar">
+        <LinearLayout
+            android:visibility="visible"
+            android:id="@+id/weather_layout"
+            android:layout_margin="16dp"
+            android:orientation="vertical"
+            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:text="12:00"
-            android:textSize="20sp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+            <TextView
+                android:id="@+id/city_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
-        <TextView
-            android:id="@+id/temp_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorPrimary"
-            android:textStyle="bold"
-            android:text="33\u2103"
-            android:textSize="26sp" />
-        <!--        android:text="33\u2109"-->
+                android:textStyle="bold"
+                android:text="Bangkok"
+                android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/humidity_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            <TextView
+                android:id="@+id/datetime_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/lightGrey"
+                android:textStyle="bold"
+                android:text="12:00"
+                android:textSize="20sp" />
 
-            android:text="10%"
-            android:textSize="23dp" />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/temp_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:text="33\u2103"
+                android:textSize="64sp" />
+            <!--        android:text="33\u2109"-->
+
+            <TextView
+                android:id="@+id/humidity_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10%"
+                android:textSize="23dp" />
+
+            <Button
+                android:id="@+id/wholeday_forecast_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Whole day Forecast"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/humidity_textview" />
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
 
     <ProgressBar
         android:id="@+id/loading_progressbar"

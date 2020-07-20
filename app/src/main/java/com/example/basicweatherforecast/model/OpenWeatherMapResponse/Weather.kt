@@ -11,4 +11,8 @@ data class Weather(
     @SerializedName("name")
     val name: String = "",
     @SerializedName("base")
-    val base: String = "")
+    val base: String = "") {
+    override fun toString(): String {
+        return "Weather(dt=$dt, main=$main, name='$name', base='$base')"
+    }
+}

@@ -1,4 +1,4 @@
-package com.example.basicweatherforecast
+package com.example.basicweatherforecast.ui.adapter
 
 import android.content.Context
 import android.widget.TextView
@@ -6,18 +6,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.basicweatherforecast.R
 import com.example.basicweatherforecast.model.OpenWeatherMapResponse.Hourly
 //import com.example.basicweatherforecast.model.OpenWeatherMapResponse.Forecast
 import com.example.basicweatherforecast.utility.AppUtils
 import kotlinx.android.synthetic.main.item_forecast.view.*
-import kotlinx.android.synthetic.main.item_github_user.view.temp_textview
-import kotlinx.android.synthetic.main.item_github_user.view.humidity_textview
+import kotlinx.android.synthetic.main.item_forecast.view.temp_textview
+import kotlinx.android.synthetic.main.item_forecast.view.humidity_textview
 
 class OneCallAdapter(private val mContext: Context, private val mWeatherList: List<Hourly>) : RecyclerView.Adapter<OneCallAdapter.CurrentWeatherViewHolder>() {
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): CurrentWeatherViewHolder {
         val itemView = LayoutInflater.from(viewGroup.context).inflate(R.layout.item_forecast, viewGroup, false)
 
-        return CurrentWeatherViewHolder(itemView)
+        return CurrentWeatherViewHolder(
+            itemView
+        )
     }
 
     override fun onBindViewHolder(holder: CurrentWeatherViewHolder, position: Int) {
@@ -27,10 +30,11 @@ class OneCallAdapter(private val mContext: Context, private val mWeatherList: Li
 
         holder.datetime_textview.text = dt
 
-        val temp = AppUtils.getTemperature(currentWeather.temp)
+        val temp = AppUtils.getTemperatureText(currentWeather.temp)
 
         holder.temp_textview.text = temp
-        holder.humidity_textview.text = if (currentWeather.humidity != null)  currentWeather.humidity.toString() else "0.0"
+        val humidity = AppUtils.getHumidityText(currentWeather.humidity)
+        holder.humidity_textview.text = humidity
     }
 
     override fun getItemCount(): Int {

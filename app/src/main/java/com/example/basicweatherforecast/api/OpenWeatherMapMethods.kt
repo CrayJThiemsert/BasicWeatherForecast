@@ -45,4 +45,12 @@ interface OpenWeatherMapMethods {
     fun getOneWholeDayForecast(
         @Query("units") units: String
     ): Single<OneCall>
+
+    @GET("onecall")
+    fun getOneWholeDayForecastByLatLon(
+        @Query("appid") appid: String,
+        @Query("lat") lat: String,
+        @Query("lon") lon: String,
+        @Query("units") units: String
+    ): Single<OneCall>
 }

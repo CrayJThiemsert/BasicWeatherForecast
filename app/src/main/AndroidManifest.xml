@@ -19,14 +19,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".GitHubUserActivity" />
-
-        <activity android:name=".GitHubUserStartWithSActivity" />
-
-        <activity android:name=".CurrentWeatherActivity" />
-
-        <activity android:name=".WholeDayForecastActivity" />
-
     </application>
 
 </manifest>
