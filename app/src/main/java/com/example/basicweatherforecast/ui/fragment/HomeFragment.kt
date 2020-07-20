@@ -153,10 +153,11 @@ class HomeFragment : Fragment() {
         city_searchbar.lastSuggestions = suggest
 
         loading_progressbar.visibility = View.GONE
-        weather_layout.visibility = View.VISIBLE
+
 
         if(!AppUtils.mCurrentWeather.name.equals("")) {
             getWeatherInformation(AppUtils.mCurrentWeather.name)
+            weather_layout.visibility = View.VISIBLE
         }
 
     }
@@ -189,6 +190,7 @@ class HomeFragment : Fragment() {
 
             override fun onSuccess(currentWeather: Weather) {
                 AppUtils.mCurrentWeather = currentWeather
+                weather_layout.visibility = View.VISIBLE
 
                 println("currentWeather=" + currentWeather.toString())
                 println("mCurrentWeather=" + AppUtils.mCurrentWeather.toString())
