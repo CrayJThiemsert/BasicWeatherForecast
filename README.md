@@ -3,7 +3,7 @@ Kotlin Basic Weather Forecast mobile application with ReactiveX and Dependencies
 Project of assignment for senior android developer position (Kotlin).
 
 ## Screenshots
-![](video/how_to_use_app.mp4)
+![](video/how_to_use_app.gif)
 
 ##  Goal
 The goal of this assignment is to assess your skills and knowledge of following topics:
